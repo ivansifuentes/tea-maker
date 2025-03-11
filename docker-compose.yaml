@@ -1,0 +1,50 @@
+services:
+  # frontend:
+  #   build: ./front-end
+  #   container_name: frontend_tea
+  #   ports:
+  #     - '3000:3000'
+    # networks:
+      # - tea-network
+  # backend:
+  #   build: ./back-end
+  #   container_name: backend_tea
+  #   ports:
+  #     - '4000:4000'
+    # networks:
+      # - tea-network
+  #   stdin_open: true
+  #   tty: true
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - tea-network
+  flyway:
+    image: flyway/flyway:6.3.1
+    command: -configFiles=/flyway/conf/flyway.config -locations=filesystem:/flyway/sql -connectRetries=60 migrate
+    volumes:
+      - ${PWD}/migrations:/flyway/sql
+      - ${PWD}/docker-flyway.config:/flyway/conf/flyway.config
+    depends_on:
+      - postgres
+    networks:
+      - tea-network
+  postgres:
+    image: postgres:12.2-alpine
+    restart: always
+    ports:
+    - "5432:5432"
+    networks:
+      - tea-network
+    environment:
+    - POSTGRES_USER=tea-fetcher
+    - POSTGRES_PASSWORD=pass
+    - POSTGRES_DB=tea-db
+networks:
+  tea-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16

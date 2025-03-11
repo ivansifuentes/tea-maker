@@ -1,0 +1,12 @@
+// Set accessibiilty font base size
+:root {
+    --primary-blue-color: #144BFF;
+    --primary-black-color: #21272A;
+    --light-grey-color: #F0F0F0;
+    --disabled-grey-color: #DBDFE4;
+}
+
+@import 'components/variables.scss';
+@import 'components/global.scss';
+@import 'components/sidebar.scss';
+

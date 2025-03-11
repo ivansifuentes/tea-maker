@@ -1,0 +1,20 @@
+.sidebar {
+    border-width: 1px;
+    border-right-style: solid;
+    border-color: rgb(219, 223, 228);
+    padding-right: unset;
+}
+
+.sidebar-nav {
+    padding-right: unset;
+    --cui-sidebar-nav-padding-x: 0;
+}
+
+.sidebar-nav .nav-link {
+    border-radius: unset;
+}
+
+.sidebar-nav .nav-link.active {
+    color: white;
+    background: #144BFF;
+}

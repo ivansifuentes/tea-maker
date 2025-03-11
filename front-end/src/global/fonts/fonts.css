@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Lufga';
+    src: url('./Lufga-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LufgaBold';
+    src: url('./LufgaChargie-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LufgaMedium';
+    src: url('./LufgaChargie-Medium.ttf') format('truetype');
+}

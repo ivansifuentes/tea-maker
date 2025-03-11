@@ -1,0 +1,205 @@
+body {
+    font-family: Lufga;
+}
+
+h3 {
+    font-family: LufgaMedium;
+}
+
+.contentArea {
+    max-width: 80vw;
+}
+
+.d-flex.row {
+    flex-wrap: nowrap;
+}
+
+.badge {
+    color: black;
+}
+
+th {
+    font-size: 12px;
+}
+
+td {
+    font-size: 14px;
+}
+
+.global-header {
+    border: 0;
+    padding: 20px 0 30px;
+}
+
+.tea-logo {
+    padding: 0.75rem 1rem;
+    width: $tea-logo-width;
+}
+
+.tea-logo-image {
+    width: $tea-logo-width;
+}
+
+
+.content {
+    min-height: calc(100vh - $tea-footer-height);
+}
+
+.footer {
+    height: calc($tea-footer-height - 30px);
+    background: var(--primary-black-color);
+    color: #FFFFFF;
+    --cui-footer-border-color: none;
+}
+
+.tea-logo-footer {
+    width: $tea-footer-logo-width;
+}
+
+.tea-logo-footer-image {
+    width: $tea-footer-logo-width;
+}
+
+.footer-first-column {
+    margin-left: 2rem;
+    font-size: 18px;
+}
+
+.footer-standard-column {
+    margin-left: 10vw;
+    font-size: 16px;
+}
+
+.footer-grey-text {
+    color: var(--cui-footer-grey-text-color);
+}
+
+.nav-underline-border .nav-link.active, .nav-underline-border .show>.nav-link {
+    color: var(--primary-blue-color);
+}
+
+.rs-date-range-input {
+    padding: 12px;
+    background-color: var(--light-grey-color);
+    border-radius: 0;
+}
+
+.rs-input-group.rs-input-group-inside {
+    background-color: var(--light-grey-color);
+    border: var(--light-grey-color) solid var(--light-grey-color);
+}
+
+.light-grey-bg {
+    background-color: var(--light-grey-color);
+}
+
+.light-grey-border {
+    border: var(--light-grey-color) solid var(--light-grey-color);
+}
+
+.black-text {
+    color: black;
+}
+
+.white-text {
+    color: #FFF;
+}
+
+.white-text:link, .white-text:visited, .white-text:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.bold {
+    font-family: LufgaMedium;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-26 {
+    font-size: 26px;
+}
+
+.info-row-header {
+    color: var(--cui-dark-grey-info);
+    min-width: 15vw;
+}
+
+.dark-grey-color {
+    color: var(--cui-dark-grey-info);
+}
+
+.dark-border-bottom {
+    border-bottom: 1px solid lightgray;
+}
+
+.black-border-right {
+    border-right: 1px solid black;
+}
+
+.bg-primary {
+    background-color: var(--primary-blue-color) !important;
+}
+
+
+.form-control:focus {
+    border: var(--light-grey-color) solid var(--light-grey-color);
+    box-shadow: 0 0 0 1px var(--primary-blue-color);
+    background-color: var(--light-grey-color);
+}
+
+.breadcrumb-item {
+    a {
+        color: #000;
+        font-family: LufgaMedium;
+    }
+}
+
+.breadcrumb-item.active {
+    color: #000;
+    font-family: LufgaMedium;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: #000;
+    font-family: LufgaMedium;
+}
+
+.uppercase-font {
+    text-transform: uppercase;
+}
+
+.chart-header {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.status-marker {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px !important;
+}
+
+.summary-text {
+    font-size: 12px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.dashboard-section {
+    border-bottom: solid var(--cui-border-color);
+    border-bottom-width: thin;
+}
+
+.table-pagination {
+    font-size: 14px;
+    font-family: LufgaMedium;
+}
+
+.settings-card {
+    max-width: 25vw;
+}
