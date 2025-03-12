@@ -3,7 +3,7 @@ import NewPlayerForm from "./NewPlayerForm";
 import CurrentPlayers from "./CurrentPlayers";
 import PickTeaMaker from "./PickTeaMaker";
 import { useAppSelector } from "../../utils/store";
-import { selectWinner } from "./slice";
+import { selectPlayers, selectWinner } from "./slice";
 import ShowWinner from "./ShowWinner";
 
 export type Player = {
@@ -13,6 +13,7 @@ export type Player = {
 
 function RoundPage() {
     const winner = useAppSelector(selectWinner);
+    const players = useAppSelector(selectPlayers);
 
     if (winner) {
         return (
@@ -21,15 +22,17 @@ function RoundPage() {
     }
 
     return (
-        <CContainer>
+        <CContainer className="mt-3">
             <CRow>
                 <CCol>
-                    Tea
+                    <h3>
+                        <label>Tea Making Round</label>
+                    </h3>
                 </CCol>
             </CRow>
             <NewPlayerForm />
-            <CurrentPlayers />
-            <PickTeaMaker />
+            {players.length > 0 && <CurrentPlayers />}
+            {players.length > 0 && <PickTeaMaker />}
         </CContainer>
     );
 }

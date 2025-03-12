@@ -16,15 +16,6 @@ export const fetchUser = async (req: Request, res: Response) => {
     }
 
     let user;
-    // try {
-    //     interval = parser.parseExpression(recurrent, {
-    //         tz: TZ,
-    //     });
-    // } catch (e: any) {
-    //     return res.status(400).json([
-    //         'invalid request'
-    //     ]);
-    // }
 
     return res.status(200).json(user);
 }

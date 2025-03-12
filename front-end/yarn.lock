@@ -1104,7 +1104,7 @@
     "@coreui/coreui" "^5.0.0"
     chart.js "^4.4.2"
 
-"@coreui/coreui@^4.3.2":
+"@coreui/coreui@^4.3.0":
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-4.3.2.tgz#3c1d7eae4a740d2b473e862580ee863c40dcde18"
   integrity sha512-SKGY6E6v7QGq0P3YTnZQRSrU8t0euLQ3UV/FH5j0JmHYBBu7Mv0Hd9g8AESnj8xrCelKZ5bdZKZhmKaIdG5clw==
@@ -1134,7 +1134,7 @@
     "@coreui/chartjs" "^4.0.0"
     chart.js "^4.4.2"
 
-"@coreui/react@4.11.1":
+"@coreui/react@^4.11.1":
   version "4.11.1"
   resolved "https://registry.yarnpkg.com/@coreui/react/-/react-4.11.1.tgz#90b7213d9e36c722625f2192ffc6c265af2a6718"
   integrity sha512-2EYnV6kpyH8/648+iffRy/I/xCEnD2MnEOuo1LPiUSX7EqoHn5M3fI+sf4vM9Wrqz4Gv2gxCl8DNRpk2xcLANQ==

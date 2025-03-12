@@ -29,12 +29,14 @@ function NewPlayerForm() {
         <div className="pb-4 dark-border-bottom">
             <CCol md={4}>
                 <CCard className="px-3">
-                    <CRow className="my-3">
+                    <CRow className="my-2">
                         <CCol>
-                            Enter a new player
+                            <label className="bold">
+                                Enter a new player
+                            </label>
                         </CCol>
                     </CRow>
-                    <CRow className="my-3">
+                    <CRow className="my-2">
                         <CCol>
                             <CFormInput
                                 placeholder="Enter name"
@@ -43,7 +45,7 @@ function NewPlayerForm() {
                             />
                         </CCol>
                     </CRow>
-                    <CRow className="my-3">
+                    <CRow className="my-2">
                         <CCol>
                             <CButton
                                 color="primary"

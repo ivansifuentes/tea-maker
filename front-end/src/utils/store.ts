@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
-import layout from '../containers/Layout/slice';
 import round from '../containers/RoundPage/slice';
+import summary from '../containers/SummaryPage/slice';
 
 const store = configureStore({
     reducer: {
-        layout,
         round,
+        summary,
     },
 });
 

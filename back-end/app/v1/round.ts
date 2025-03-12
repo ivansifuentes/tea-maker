@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import crypto from 'crypto';
-import { insertPlayer, Player } from '../logic/player';
+import { fetchPlayerByName, insertPlayer, Player } from '../logic/player';
 import { insertRound } from '../logic/round';
 
 // Receives a list of players, chooses one to be the tea maker
@@ -11,7 +11,7 @@ export const pickTeaMaker = async (req: Request, res: Response) => {
           'invalid request'
         ]);
     }
-console.log({players});
+
     // each participant needs to be registered in our db
     const registered: Array<Player> = [];
     for (const p of players) {
@@ -19,13 +19,20 @@ console.log({players});
             registered.push(p);
             continue;
         }
+        // do we have a player with that name already
+        const playerByName = await fetchPlayerByName(p.name);
+        if (playerByName) {
+            registered.push(playerByName);
+            continue;
+        }
+
+        // we create it in our db
         const player = await insertPlayer(p);
         if (!player)
             continue;
         registered.push(player);
-        console.log({player});
     }
-console.log({registered});
+
     // pick randomly a "winner"
     const random = crypto.randomInt(registered.length);
     console.log({random});

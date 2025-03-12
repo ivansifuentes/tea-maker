@@ -203,3 +203,17 @@ td {
 .settings-card {
     max-width: 25vw;
 }
+
+.summary-list-row {
+    justify-content: space-evenly;
+}
+
+.summary-list-column {
+    width: 33% !important;
+    overflow: hidden;
+}
+
+.summary-header {
+    color: var(--primary-blue-color);
+    border-bottom: 1px solid var(--primary-blue-color);
+}

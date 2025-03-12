@@ -5,6 +5,7 @@ import { Player } from './RoundPage';
 // Define a type for the slice state
 interface RoundState {
     players: Array<Player>;
+    spotlighted?: number;
     winner?: Player;
 }
 
@@ -24,13 +25,17 @@ export const roundSlice = createSlice({
         setWinner: (state, action: PayloadAction<Player | undefined>) => {
             state.winner = action.payload;
         },
+        setSpotlighted: (state, action: PayloadAction<number | undefined>) => {
+            state.spotlighted = action.payload;
+        },
     },
 });
 
-export const { setPlayers, setWinner } = roundSlice.actions;
+export const { setPlayers, setWinner, setSpotlighted } = roundSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectPlayers = (state: RootState) => state.round.players;
 export const selectWinner = (state: RootState) => state.round.winner;
+export const selectSpotlighted = (state: RootState) => state.round.spotlighted;
 
 export default roundSlice.reducer;

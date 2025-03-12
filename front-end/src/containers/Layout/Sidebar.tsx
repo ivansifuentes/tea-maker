@@ -1,27 +1,9 @@
-// import {
-//     CNavItem,
-//     CSidebar,
-//     CSidebarBrand,
-//     CSidebarNav,
-// } from '@coreui/react';
-import { useWindowSize } from '@react-hookz/web/esm';
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Link, useLocation } from 'react-router-dom';
-// import { BREAKPOINT_MD } from '../../utils/breakpoint';
-import { useAppSelector } from '../../utils/store';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { CNavItem, CSidebar, CSidebarBrand, CSidebarNav } from '@coreui/react';
 
 const AppSidebar = () => {
-    const showSidebar = useAppSelector((state: any) => state.layout.showSidebar);
-    const showSidebarMobile = useAppSelector(
-        (state: any) => state.layout.showSidebarMobile
-    );
-    const windowSize = useWindowSize();
-    const [entityId, setEntityId] = useState('')
-
     const pathname = window.location.pathname;
-    const location = useLocation();
 
     return (
         <CSidebar

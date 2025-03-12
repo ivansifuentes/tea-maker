@@ -2,7 +2,6 @@ import { CContainer, CRow } from '@coreui/react';
 import Sidebar from './Sidebar';
 import Content from './Content';
 // import Header from './Header';
-// import Footer from './Footer';
 
 function Layout() {
     return (
@@ -18,9 +17,6 @@ function Layout() {
                     </CRow>
                 </CContainer>
             </CRow>
-            {/* <CRow className='footer'>
-                <Footer />
-            </CRow> */}
         </div>
     );
 }

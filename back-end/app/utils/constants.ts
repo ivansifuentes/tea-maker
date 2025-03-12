@@ -1,3 +1,2 @@
-export const REDIS_SCHEDULED_TASK = 'scheduled-tasks';
-export const REDIS_EXECUTED_LIST = 'executed-tasks';
-export const TZ = 'America/New_York';
+export const TOP_RANK_LIMIT = 5;
+export const TOP_PARTICIPANT_LIMIT = 6;

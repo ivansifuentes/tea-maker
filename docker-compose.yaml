@@ -4,8 +4,8 @@ services:
   #   container_name: frontend_tea
   #   ports:
   #     - '3000:3000'
-    # networks:
-      # - tea-network
+  #   networks:
+  #     - tea-network
   # backend:
   #   build: ./back-end
   #   container_name: backend_tea

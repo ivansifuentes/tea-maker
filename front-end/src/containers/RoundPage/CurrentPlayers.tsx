@@ -21,7 +21,11 @@ function CurrentPlayers() {
     return (
         <div className="mt-4 pb-4 dark-border-bottom">
             <CRow>
-                Current Players
+                <CCol>
+                    <h3>
+                        <label>Current Players</label>
+                    </h3>
+                </CCol>
             </CRow>
             <CRow>
                 {players.map((player) => (

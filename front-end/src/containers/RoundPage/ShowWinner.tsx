@@ -13,7 +13,11 @@ function ShowWinner(props: WinnerProps) {
     return (
         <div className="mt-4 pb-4">
             <CRow>
-                The Selected Tea Maker Is
+                <CCol>
+                    <h3>
+                        <label>The Selected Tea Maker Is</label>
+                    </h3>
+                </CCol>
             </CRow>
             <CRow>
                 <CCol md={6}>
