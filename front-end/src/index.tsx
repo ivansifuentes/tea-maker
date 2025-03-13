@@ -12,7 +12,8 @@ import axios from 'axios';
 // Add a request interceptor
 axios.interceptors.request.use(function (config) {
   const token = localStorage.getItem('user-token');
-  config.headers.Authorization =  `Bearer ${token}`;
+  if (token && token !== 'null')
+    config.headers.Authorization =  `Bearer ${token}`;
    
   return config;
 });

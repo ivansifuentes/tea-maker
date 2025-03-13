@@ -1,9 +1,8 @@
 import { CButton, CCol, CRow, CWidgetStatsF } from "@coreui/react";
-import { useState } from "react";
 import { selectPlayers, selectSpotlighted, setPlayers, setSpotlighted, setWinner } from "./slice";
 import store, { useAppSelector } from "../../utils/store";
 import CIcon from '@coreui/icons-react'
-import { cilUser, cilDelete } from '@coreui/icons'
+import { cilUser } from '@coreui/icons'
 import axios from "axios";
 import { API_URL, PICK_PAUSE } from "../../constants";
 
