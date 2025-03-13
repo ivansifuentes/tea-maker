@@ -4,7 +4,7 @@ This app is Dockerized into different containers, when it's deployed it creates 
 - Front-end, Typescript/React app
 - Back-end, Typescript/NodeJS app
 - Postgres DB
-- Flyway for initializing the DB schema and prepolating with some data
+- Flyway, for initializing the DB schema and prepopulating with some data
 - Redis
 
 ## Instructions
