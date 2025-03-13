@@ -14,7 +14,7 @@ After cloning the repo, from the root directory build the app with:
 
 Then you can run it with:
 > docker compose up -d
-// -d flag is for detach mode
+
 
 Once you are done, it can be stopped with:
 > docker compose down
