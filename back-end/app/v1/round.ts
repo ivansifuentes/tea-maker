@@ -35,7 +35,6 @@ export const pickTeaMaker = async (req: Request, res: Response) => {
 
     // pick randomly a "winner"
     const random = crypto.randomInt(registered.length);
-    console.log({random});
     const winner = registered[random];
     // store the round details & the round participants
     await insertRound(winner, registered);

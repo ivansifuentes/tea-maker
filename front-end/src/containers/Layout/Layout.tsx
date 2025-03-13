@@ -1,7 +1,7 @@
 import { CContainer, CRow } from '@coreui/react';
 import Sidebar from './Sidebar';
 import Content from './Content';
-// import Header from './Header';
+import Header from './Header';
 
 function Layout() {
     return (
@@ -10,7 +10,7 @@ function Layout() {
                 <Sidebar />
                 <CContainer className='contentArea'>
                     <CRow>
-                        {/* <Header /> */}
+                        <Header />
                     </CRow>
                     <CRow>
                         <Content />

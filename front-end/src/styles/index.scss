@@ -4,9 +4,11 @@
     --primary-black-color: #21272A;
     --light-grey-color: #F0F0F0;
     --disabled-grey-color: #DBDFE4;
+    --cui-sidebar-brand-bg: white;
 }
 
 @import 'components/variables.scss';
 @import 'components/global.scss';
 @import 'components/sidebar.scss';
+@import 'components/summary.scss';
 

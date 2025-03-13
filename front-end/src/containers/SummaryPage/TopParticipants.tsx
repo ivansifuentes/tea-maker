@@ -7,37 +7,32 @@ function TopParticipants() {
     const topList = useAppSelector(selectParticipantList);
 
     return (
-        <CCard>
+        <CCard className="summary-chart-card">
             <CCardBody className='d-flex flex-column align-items-center'>
                 <CCardTitle className="text-center uppercase-font summary-title">
                     Most Rounds Played
                 </CCardTitle>
 
                 <CChart
-                    type="doughnut"
+                    type="bar"
                     data={{
                         labels: topList.map(x => x.name),
                         datasets: [
                             {
-                                backgroundColor: [
-                                    '#4FC0E8',
-                                    '#A0D468',
-                                    '#CCD0D9',
-                                    '#FFCE55',
-                                    '#656D78',
-                                    '#434A54',
-                                ],
+                                label: 'Rounds played',
                                 data: topList.map(x => x.round_count),
-                            },
+                            }
                         ],
                     }}
+                    className='summary-bar'
                     options={{
                         responsive: true,
                         plugins: {
                             legend: {
                                 display: false,
-                            }
-                        }
+                            },
+                        },
+                        
                     }}
                     wrapper={true}
                 />

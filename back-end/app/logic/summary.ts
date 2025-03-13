@@ -1,6 +1,7 @@
 import { TOP_PARTICIPANT_LIMIT, TOP_RANK_LIMIT } from "../utils/constants";
 import sql from "../utils/db";
 
+// Fetch TOP X players that have been selected the most
 export async function fetchWinnerRankRecords() {
 	let ranked;
 	try {
@@ -33,7 +34,7 @@ export async function fetchWinnerRankRecords() {
     return ranked;
 }
 
-
+// Fetch TOP X players that have participated in the most num of rounds
 export async function fetchTopParticipantRecords() {
     let top;
     try {

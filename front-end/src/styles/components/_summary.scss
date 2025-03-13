@@ -1,0 +1,27 @@
+.summary-list-row {
+    justify-content: space-evenly;
+}
+
+.summary-list-column {
+    width: 33% !important;
+    overflow: hidden;
+}
+
+.summary-header {
+    color: var(--primary-blue-color);
+    border-bottom: 1px solid var(--primary-blue-color);
+}
+
+.summary-chart-card {
+    min-height: 280px;
+}
+
+.summary-chart {
+    max-height: 184px;
+    max-width: 184px;
+}
+
+.summary-bar {
+    max-height: 314px;
+    max-width: 314px;
+}

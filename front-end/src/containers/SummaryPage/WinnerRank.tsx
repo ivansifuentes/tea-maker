@@ -8,7 +8,7 @@ function WinnerRank() {
     const rankList = useAppSelector(selectRankList);
 
     return (
-        <CCard>
+        <CCard className="summary-chart-card">
             <CCardBody className='d-flex flex-column align-items-center'>
                 <CCardTitle className="text-center uppercase-font summary-title">
                     Selected on Most Rounds
@@ -32,6 +32,7 @@ function WinnerRank() {
                             },
                         ],
                     }}
+                    className='summary-chart'
                     options={{
                         responsive: true,
                         plugins: {

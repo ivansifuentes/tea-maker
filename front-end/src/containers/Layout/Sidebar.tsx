@@ -13,7 +13,7 @@ const AppSidebar = () => {
         >
             <Link to="/">
                 <CSidebarBrand className="d-md-flex pt-5 pb-3 tea-logo">
-                    <img className='tea-logo-image' src={require('../../logo.svg').default} alt='teaLogo' />
+                    Tea Maker App
                 </CSidebarBrand>
             </Link>
             <CSidebarNav>

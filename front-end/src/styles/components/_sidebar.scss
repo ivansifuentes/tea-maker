@@ -3,6 +3,17 @@
     border-right-style: solid;
     border-color: rgb(219, 223, 228);
     padding-right: unset;
+    background-color: white;
+}
+
+.sidebar-brand {
+    display: flex;
+    font-family: LufgaMedium;
+    flex: 0 0 var(--cui-sidebar-brand-height);
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-black-color);
+    background: white;
 }
 
 .sidebar-nav {
@@ -12,9 +23,19 @@
 
 .sidebar-nav .nav-link {
     border-radius: unset;
+    color: var(--primary-blue-color);
 }
 
 .sidebar-nav .nav-link.active {
     color: white;
-    background: #144BFF;
+    background: var(--primary-blue-color);
+}
+
+.sidebar-nav .nav-link.active:hover {
+    color: white;
+    background: var(--primary-black-color);
+}
+
+.sidebar-nav .nav-link:hover {
+    color: var(--primary-blue-color);
 }

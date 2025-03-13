@@ -44,7 +44,7 @@ function SummaryPage() {
                     </h3>
                 </CCol>
             </CRow>
-            <CRow>
+            <CRow className="my-4">
                 <CCol md={6}>
                     <WinnerRankTable />
                 </CCol>
@@ -52,7 +52,7 @@ function SummaryPage() {
                     <WinnerRank />
                 </CCol>
             </CRow>
-            <CRow>
+            <CRow className="my-4">
                 <CCol md={6}>
                     <TopParticipantsTable />
                 </CCol>

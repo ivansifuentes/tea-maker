@@ -33,7 +33,6 @@ td {
 
 .tea-logo {
     padding: 0.75rem 1rem;
-    width: $tea-logo-width;
 }
 
 .tea-logo-image {
@@ -76,17 +75,6 @@ td {
 
 .nav-underline-border .nav-link.active, .nav-underline-border .show>.nav-link {
     color: var(--primary-blue-color);
-}
-
-.rs-date-range-input {
-    padding: 12px;
-    background-color: var(--light-grey-color);
-    border-radius: 0;
-}
-
-.rs-input-group.rs-input-group-inside {
-    background-color: var(--light-grey-color);
-    border: var(--light-grey-color) solid var(--light-grey-color);
 }
 
 .light-grey-bg {
@@ -143,28 +131,10 @@ td {
     background-color: var(--primary-blue-color) !important;
 }
 
-
 .form-control:focus {
     border: var(--light-grey-color) solid var(--light-grey-color);
     box-shadow: 0 0 0 1px var(--primary-blue-color);
     background-color: var(--light-grey-color);
-}
-
-.breadcrumb-item {
-    a {
-        color: #000;
-        font-family: LufgaMedium;
-    }
-}
-
-.breadcrumb-item.active {
-    color: #000;
-    font-family: LufgaMedium;
-}
-
-.breadcrumb-item+.breadcrumb-item::before {
-    color: #000;
-    font-family: LufgaMedium;
 }
 
 .uppercase-font {
@@ -174,12 +144,6 @@ td {
 .chart-header {
     font-size: 20px;
     text-transform: uppercase;
-}
-
-.status-marker {
-    width: 10px;
-    height: 10px;
-    border-radius: 9999px !important;
 }
 
 .summary-text {
@@ -195,25 +159,6 @@ td {
     border-bottom-width: thin;
 }
 
-.table-pagination {
-    font-size: 14px;
-    font-family: LufgaMedium;
-}
-
 .settings-card {
     max-width: 25vw;
-}
-
-.summary-list-row {
-    justify-content: space-evenly;
-}
-
-.summary-list-column {
-    width: 33% !important;
-    overflow: hidden;
-}
-
-.summary-header {
-    color: var(--primary-blue-color);
-    border-bottom: 1px solid var(--primary-blue-color);
 }
