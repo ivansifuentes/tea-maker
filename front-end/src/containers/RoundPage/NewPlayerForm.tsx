@@ -12,7 +12,7 @@ function NewPlayerForm() {
     const addToPlayers = () => {
         if (!newPlayerName)
             return;
-        const exists = players?.some((p) => p.name === newPlayerName);
+        const exists = players?.some((p) => p.name.toLowerCase() === newPlayerName.toLowerCase());
         // for simplicity-sake, only accept unique names
         if (exists) {
             setError('Player name already exists');
@@ -23,6 +23,7 @@ function NewPlayerForm() {
                 name: newPlayerName,
             }])
         );
+        setNewPlayerName(undefined);
     }
 
     return (

@@ -1,20 +1,20 @@
 services:
-  # frontend:
-  #   build: ./front-end
-  #   container_name: frontend_tea
-  #   ports:
-  #     - '3000:3000'
-  #   networks:
-  #     - tea-network
-  # backend:
-  #   build: ./back-end
-  #   container_name: backend_tea
-  #   ports:
-  #     - '4000:4000'
-    # networks:
-      # - tea-network
-  #   stdin_open: true
-  #   tty: true
+  frontend:
+    build: ./front-end
+    container_name: frontend_tea
+    ports:
+      - '3000:3000'
+    networks:
+      - tea-network
+  backend:
+    build: ./back-end
+    container_name: backend_tea
+    ports:
+      - '4000:4000'
+    networks:
+      - tea-network
+    stdin_open: true
+    tty: true
   redis:
     image: redis:latest
     ports:
