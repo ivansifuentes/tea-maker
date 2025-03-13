@@ -2,9 +2,13 @@ import { CCol, CContainer, CRow } from "@coreui/react";
 import NewPlayerForm from "./NewPlayerForm";
 import CurrentPlayers from "./CurrentPlayers";
 import PickTeaMaker from "./PickTeaMaker";
-import { useAppSelector } from "../../utils/store";
-import { selectPlayers, selectWinner } from "./slice";
+import store, { useAppSelector } from "../../utils/store";
+import { selectPlayers, selectWinner, setPlayers } from "./slice";
 import ShowWinner from "./ShowWinner";
+import { selectUserPlayers, setUserPlayers } from "../PreferencesPage/slice";
+import axios from "axios";
+import { API_URL } from "../../constants";
+import { useEffect } from "react";
 
 export type Player = {
     id?: string;
@@ -12,8 +16,32 @@ export type Player = {
 }
 
 function RoundPage() {
+    const fetchData = async () => {
+        try {
+            const res = await axios.get(API_URL + '/fetch-user-players');
+            if (res.status === 200) {
+                const data = res.data;
+                store.dispatch(
+                    setUserPlayers(data)
+                );
+            }
+        } catch (e) {
+            console.error({e});
+        }
+    };
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
     const winner = useAppSelector(selectWinner);
     const players = useAppSelector(selectPlayers);
+    const userPlayers = useAppSelector(selectUserPlayers);
+
+    // If user has preferred list of players, don't start from zero
+    if (!players.length && userPlayers.length > 0) {
+        store.dispatch(setPlayers(userPlayers));
+    }
 
     if (winner) {
         return (

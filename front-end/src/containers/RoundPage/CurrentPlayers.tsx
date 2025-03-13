@@ -1,13 +1,12 @@
 import { CCol, CRow, CWidgetStatsF } from "@coreui/react";
-import { useState } from "react";
 import { selectPlayers, setPlayers } from "./slice";
 import store, { useAppSelector } from "../../utils/store";
 import CIcon from '@coreui/icons-react'
 import { cilUser, cilDelete } from '@coreui/icons'
+import { setUserPlayers } from "../PreferencesPage/slice";
 
 function CurrentPlayers() {
     const players = useAppSelector(selectPlayers);
-    const [error, setError] = useState<string>();
 
     const deletePlayer = (playerName: string) => {
         if (!playerName)
@@ -15,6 +14,10 @@ function CurrentPlayers() {
         const filteredPlayers = players.filter((p) => p.name !== playerName);
         store.dispatch(
             setPlayers([...filteredPlayers])
+        );
+        // empty the userplayers, otherwise if players gets empty, it gets restarted to userPlayers
+        store.dispatch(
+            setUserPlayers([])
         );
     }
 

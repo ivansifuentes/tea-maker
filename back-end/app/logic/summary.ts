@@ -16,16 +16,16 @@ export async function fetchWinnerRankRecords() {
                     p."name" ,
                     winner_id,
                     win_count,
-                    dense_rank() over (
+                    rank() over (
                         order by win_count desc
-                    ) dense_rank_winner
+                    ) rank_winner
                 from winner_count wc
                 join player p
                 on wc.winner_id = p.id
             )
             select *
             from winner_count_rank
-            where dense_rank_winner <= ${TOP_RANK_LIMIT}
+            where rank_winner <= ${TOP_RANK_LIMIT}
 		`;
 	} catch (e) {
 		console.error({e});

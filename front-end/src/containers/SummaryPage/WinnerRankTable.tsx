@@ -33,7 +33,7 @@ function WinnerRankTable() {
                                     {r.win_count}
                                 </div>
                                 <div className='summary-list-column'>                        
-                                    {r.dense_rank_winner}
+                                    {r.rank_winner}
                                 </div>
                             </div>
                         ))}

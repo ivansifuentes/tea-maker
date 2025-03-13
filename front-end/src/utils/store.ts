@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import round from '../containers/RoundPage/slice';
 import summary from '../containers/SummaryPage/slice';
+import preferences from '../containers/PreferencesPage/slice';
 
 const store = configureStore({
     reducer: {
         round,
         summary,
+        preferences,
     },
 });
 

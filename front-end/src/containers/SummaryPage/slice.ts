@@ -10,7 +10,7 @@ type WinnerRankRow = {
     winner_id: string;
     name: string;
     win_count: number;
-    dense_rank_winner: number
+    rank_winner: number
 }
 
 // Define a type for the slice state

@@ -7,6 +7,15 @@ import { Provider } from 'react-redux';
 import store from './utils/store';
 import { RouterProvider } from 'react-router-dom';
 import router from './utils/router';
+import axios from 'axios';
+
+// Add a request interceptor
+axios.interceptors.request.use(function (config) {
+  const token = localStorage.getItem('user-token');
+  config.headers.Authorization =  `Bearer ${token}`;
+   
+  return config;
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

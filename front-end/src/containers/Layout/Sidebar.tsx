@@ -4,6 +4,7 @@ import { CNavItem, CSidebar, CSidebarBrand, CSidebarNav } from '@coreui/react';
 
 const AppSidebar = () => {
     const pathname = window.location.pathname;
+    const token = localStorage.getItem('user-token');
 
     return (
         <CSidebar
@@ -19,6 +20,7 @@ const AppSidebar = () => {
             <CSidebarNav>
                 <CNavItem href={`/`} active={pathname.endsWith('/')}>Round</CNavItem>
                 <CNavItem href={`/summary`} active={pathname.endsWith('/summary')}>Summary</CNavItem>
+                {token && <CNavItem href={`/preferences`} active={pathname.endsWith('/preferences')}>My Preferences</CNavItem> }
             </CSidebarNav>
         </CSidebar>
     );
