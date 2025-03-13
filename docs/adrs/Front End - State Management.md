@@ -15,7 +15,7 @@ Main alternatives are:
    
  - __Context Provider:__
    
-    *pros:* Can becomes as global or as local as needed
+    *pros:* Can bec as global or as local as needed
    
     *cons:* Its syntax pollutes the DOM tree. If we want to split state logic into different context providers then each of those will need to be manually added to the DOM tree
    
